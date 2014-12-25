@@ -1,0 +1,31 @@
+#right-sidebar {
+	color:#ffad99;
+	background-color:#f30;
+	font-family:'Roboto', sans-serif;
+	font-weight:300;
+	font-size:16px;
+	text-align:center;
+	margin: 0 0 0 0;
+	position:fixed;
+	top:0;
+	right:0;
+	width:140px;
+	height:100%;
+}
+
+#right-nav-header {
+	color:#fff;
+	font-family:Roboto, sans-serif;
+	font-weight:300;
+	font-size:18px;
+	margin-bottom:10px;
+}
+
+#right-sidebar li {
+	padding:5px 0 5px 0;
+	transition:color 0.2s;
+}
+
+#right-sidebar li:hover {
+	color:#efefef;
+}

@@ -1,0 +1,225 @@
+@almost-white: #efefef;
+@base-color: #f30;
+@lighter: #f75;
+@body-text-color: #000;
+@tsa-blue: #385cff;
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+
+body {
+	min-width:0;
+	background-color: #efefef;
+	font-family: Roboto, sans-serif;
+	width:100%;
+	font-size:14px;
+	color:@body-text-color;
+}
+
+h1 {
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight:400;
+	color:@base-color;
+	text-align:center;
+}
+
+h2, h3, h4, h5, h6 {
+	font-weight:300;
+	color:@base-color;
+}
+
+.sidebar {
+	font-family: Roboto, sans-serif;
+	font-size: 18px;
+	font-weight:300;
+	text-align: left;
+}
+
+ul.nav {
+	list-style:none;
+	padding: 0 0 0 0;
+}
+
+#root-sidebar {
+	color: #efefef;
+	background-color: @base-color;
+	margin: 0 0 0 0;
+	position:fixed;
+	top:0;
+	left:0;
+	width:50px; /*35px*/
+	height:100%;
+	z-index:99;
+}
+
+ul.nav_1 {
+	position:relative;
+	top:30px;
+	/*left:20px;*/
+	li {
+		padding: 10px 0 10px 20px;
+		transition: color 0.2s, background-color 0.2s/*, padding 0.4s*/;
+		&:hover {
+			color: #fff;
+			background-color: @lighter;
+			/*padding: 15px 0 15px 0;*/
+		}
+		&._root_active {
+			color: #fff;
+			background-color: @lighter;
+			/*padding: 15px 0 15px 0;*/
+		}
+	}
+}
+
+ul.nav a {
+	color:inherit;
+	text-decoration:none;
+}
+
+.nav-icon {
+	margin:0 5px 0 0;
+	width:40px;
+	path, polyline {
+		stroke-width:1px;
+		stroke:#efefef;
+		fill:none;
+	}
+}
+
+
+.root-nav-text {
+	display:none;
+}
+
+#sidebar_2 {
+	color: #888;
+	background-color: #efefef;
+	margin: 0 0 0 0;
+	position:fixed;
+	top:0;
+	left:50px;
+	width:0; /*35px*/
+	height:100%;
+	overflow:hidden;
+	transition:width 0.4s;
+	z-index:99;
+	&._nav_open {
+		width:200px;
+	}
+}
+
+ul.nav_2 {
+	position:relative;
+	top:30px;
+	left:50px;
+	display:none;
+	&._nav_active {
+		display:block;
+	}
+	li {
+		padding: 7px 0 7px 0;
+		transition: color 0.2s;
+		&:hover, &._2_active {
+			color:@base-color;
+		}
+	}
+}
+
+#nav-border {
+	position:fixed;
+	top:0;
+	left:50px;
+	width:5px;
+	bottom:0;
+	background-color:@lighter; /*ff8000*/
+	transition: left 0.4s;
+	z-index:99;
+}
+
+#nav-border._nav_open {
+	left:250px;
+}
+
+#close {
+	font-size:24px;
+	font-weight:500;
+	color:#ccc;
+	position:absolute;
+	right:15px;
+	top:12px;
+	transition:color 0.2s;
+	cursor:pointer;
+}
+
+#close:hover {
+	color:#aaa;
+}
+
+.menu-button {
+	display:none;
+}
+
+/*temp*/
+.content {
+	position:absolute;
+	left:70px;
+	top:0;
+	right:25px;
+	transition:left 0.4s;
+}
+
+.content a {
+	color:#03f;
+}
+
+/* Tablet stuff is complicated, so it goes in a separate file. */
+@import url('./tablet.less');
+
+/* Everything from a landscape iPad to 4K and beyond */
+@media only screen and (min-width: 1024px) {
+	body {
+		font-size:16px;
+	}
+
+	#root-sidebar {
+		width:165px; /*35px*/
+	}
+
+	.root-nav-text {
+		display:inline;
+	}
+
+	#sidebar_2 {
+		left:165px;
+	}
+
+	#nav-border {
+		position:fixed;
+		top:0;
+		left:165px;
+		width:5px;
+		bottom:0;
+		background-color:@lighter; /*ff8000*/
+		transition: left 0.4s;
+		z-index:99;
+		&._nav_open {
+			left:365px;
+		}
+	}
+
+	.content {
+		left:200px;
+		&._nav_open {
+			left:400px;
+		}
+	}
+
+}
+
+/* Avoids excessively wide columns of text */
+@media only screen and (min-width: 1280px) {
+	.content {
+		width:880px;
+	}
+}

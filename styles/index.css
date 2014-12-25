@@ -1,0 +1,69 @@
+#parallax-container {
+	height:2500px;
+}
+
+.parallax {
+	position:fixed;
+	left:200px;
+	top:0;
+	transition:left 0.4s, opacity 0.8s;
+	opacity:0;
+}
+
+.parallax._visible {
+	opacity:1;
+}
+
+.parallax._nav_open {
+	left:400px;
+}
+
+#main {
+	top:100px;
+	transition:left 0.4s, opacity 1.2s
+}
+
+/* END PARALLAX */
+
+#home-first {
+	position:absolute;
+	left:350px;
+	top:200px;
+	width:400px;
+}
+
+#home-first h1 {
+	font-size:50px;
+	margin: 0 0 0 0
+}
+
+#home-first h2 {
+	font-style:italic;
+	margin:10px 0 10px 0;
+}
+
+#home-first hr {
+	border:0 solid #fff;
+	border-top:1px solid #f30;
+}
+
+#president-letter {
+	position:absolute;
+	left:80px;
+	width:860px;
+	height:260px;
+	background-color:#f75;
+	color:white;
+	font-weight:300;
+	padding: 5px 15px 5px 15px;
+}
+
+#president-letter h2 {
+	color:white;
+	margin:0 0 10px 0;
+}
+
+#president-portrait {
+	float:left;
+	margin:0 10px 10px 0;
+}

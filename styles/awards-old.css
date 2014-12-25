@@ -1,0 +1,207 @@
+section.content-awards {
+  position:absolute;
+  left:170px;
+  right:140px;
+  top:0;
+  transition:left 0.4s;
+}
+
+section.content-awards._nav_open {
+  left:370px;
+}
+
+.awards {
+  padding:0 0 0 30px;
+}
+
+.awards-table {
+  margin: 0 30px 0 75px;
+  border-collapse:collapse;
+}
+
+.awards-table tr, td {
+  border: 1px solid #ccc;
+  padding: 2px 15px 2px 5px;
+}
+
+.awards-header td {
+  font-weight:700;
+  border-bottom: 2px solid #ff530d;
+}
+
+.table-caption {
+  font-weight:300;
+  font-size:16px;
+  color:#888;
+  margin-left:30px;
+}
+
+.conf-theme {
+  margin-left:30px;
+  color:#ff350d;
+  font-weight:300;
+  font-size:20px;
+  margin-top:0;
+}
+
+.p1 {
+  background-color:#f30;
+  border:1px solid #fff;
+  border-left:1px solid #f30;
+  color:#fff;
+  font-weight:700;
+}
+
+.p2 {
+  background-color:#ccc;
+  border:1px solid #fff;
+  border-left:1px solid #ccc;
+  color:#000;
+  font-weight:700
+}
+
+.overall td {
+  background-color:#ccc;
+  border:1px solid #fff;
+  color:#000;
+  font-size:18px;
+  font-weight:700;
+}
+
+td.o-left {
+  border-left:1px solid #ccc;
+}
+
+td.o-right {
+  border-right:1px solid #ccc;
+  text-align:center;
+}
+
+.victory td {
+  background-color:#f30;
+  border:1px solid #fff;
+  color:#fff;
+  font-size:18px;
+  font-weight:700;
+}
+
+.special td {
+  background-color:#03f;
+  color:#fff;
+  border:1px solid #fff;
+  font-weight:700;
+}
+
+#wall-of-fame {
+  margin-bottom:75px;
+}
+
+/* BEGIN PARALLAX */
+
+#parallax-header-container {
+  height:100px;
+}
+
+#parallax-header {
+  left:0;
+  right:0;
+  height:100px;
+  background-color:#bbb;
+}
+
+#parallax-header._locked {
+  position:fixed;
+  left:165px;
+  right:140px;
+  top:0;
+  transition:left 0.4s;
+  z-index:99;
+}
+
+#parallax-header._locked._nav_open {
+  left:365px;
+}
+
+#parallax-header h2 {
+  opacity:0;
+  margin:0 0 0 0;
+  color:#efefef;
+  background-color:#f30;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  text-align:center;
+  transition:opacity 0.4s
+}
+
+#parallax-header._locked h2 {
+  opacity:1;
+}
+
+#header-icons {
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:none;
+  opacity:0;
+  transition:opacity 0.4s;
+}
+
+#header-icons._visible {
+  display:table;
+  opacity:1;
+}
+
+#header-icons td {
+  border:none;
+  text-align:center;
+}
+
+.header-icon-svg {
+  position:absolute;
+  top:5px;
+  height:60px;
+}
+
+.header-icon-svg path {
+  fill:#d8d8d8;
+  transition:fill 0.4s;
+}
+
+.header-icon-svg:hover path {
+  fill:#efefef;
+}
+
+.header-icon-svg._active path {
+  fill:#efefef;
+}
+
+.awards-vertical-parallax {
+  opacity:0;
+  margin:0 0 200px 0;
+  padding:150px 0 0 0;
+  transition:opacity 0.6s
+}
+
+.awards-vertical-parallax._visible {
+  opacity:1;
+}
+
+.awards-horizontal-parallax {
+  display:none;
+  opacity:0;
+}
+
+.awards-horizontal-parallax._visible {
+  display:block;
+  opacity:inherit;
+}
+
+#temp {
+  width:100%;
+  height:1000px;
+  background-color:blue;
+  transition:opacity 0.6s
+}

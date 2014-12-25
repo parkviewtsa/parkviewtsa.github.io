@@ -1,0 +1,103 @@
+.photo-tile-wrap {
+	position:fixed;
+	left:250px;
+	right:80px;
+	top:30px;
+	bottom:30px;
+	transition:left 0.4s;
+}
+
+.photo-tile-wrap._nav_open {
+	left:425px;
+}
+
+#tile-container {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+}
+
+.tile {
+	overflow:hidden;
+}
+
+.tile-cover {
+	position:absolute;
+	top:0; left:0;
+	width:100%; height:100%;
+	transition:background-color 0.4s, opacity 1.4s 0.4s;
+}
+
+.tile-cover:hover {
+	opacity:0;
+}
+
+.tile._active .tile-cover {
+	display:none;
+}
+
+.tile-top-row {
+	background-color:#7a92ff;
+}
+
+.tile-top-row:hover {
+	background-color:#385cff;
+}
+
+.tile-bottom-row {
+	background-color:#f75;
+}
+
+.tile-bottom-row:hover {
+	background-color:#f30;
+}
+
+#tile-1 {
+	position:absolute;
+	top:0;
+	left:0;
+	width:49.5%;
+	height:66.0%;
+}
+
+#tile-6 {
+	position:absolute;
+	bottom:0;
+	right:0;
+	width:49.5%;
+	height:66%;
+}
+
+#tile-3 {
+	position:absolute;
+	top:0;
+	right:0;
+	width:24.25%;
+	height:33.0%;
+}
+
+#tile-2 {
+	position:absolute;
+	top:0;
+	right:25.25%;
+	width:24.25%;
+	height:33.0%;
+}
+
+#tile-4 {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:24.25%;
+	height:33.0%;
+}
+
+#tile-5 {
+	position:absolute;
+	bottom:0;
+	left:25.25%;
+	width:24.25%;
+	height:33.0%;
+}

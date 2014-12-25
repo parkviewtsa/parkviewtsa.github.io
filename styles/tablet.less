@@ -1,0 +1,136 @@
+/*
+ * For tablets and landscape mobile phones, we have an entirely different
+ * layout of the page. The choice of 568px is the width of a landscape iPhone 5,
+ * because (orientation:landscape) doesn't seem to work. The existing "mobile"
+ * site works fine in landscape, but the tablet version looks better on today's
+ * larger phones when in landscape.
+ */
+
+@media only screen and (min-width:568px) and (max-width:1023px) {
+  body {
+   font-size:15px;
+  }
+
+  @nav-2-height:65px;
+
+  .content {
+    left:50px;
+    right:25px;
+    top:55px;
+  }
+
+  #root-sidebar {
+    opacity:1;
+    visibility:visible;
+    transition:opacity 0.6s;
+    color: #efefef;
+    background-color: @base-color;
+    margin: 0 0 0 0;
+    position:fixed;
+    top:0;
+    left:0;
+    height:50px; /*35px*/
+    width:100%;
+    z-index:99;
+    overflow:hidden;
+  }
+
+  @numItems: 5;
+
+  .root-nav-text {
+    display:none;
+  }
+
+  ul.nav_1 {
+    position:absolute;
+    margin:0 0 0 0;
+    top:0;
+    left:5vw;
+    right:5px;
+    transition:left 0.4s;
+    &._nav_open {
+      left:2.5vw;
+    }
+    li {
+      margin:0 5vw 0 5vw;
+      padding:15px 10px 15px 10px;
+      display:inline;
+      float:left;
+      text-align:center;
+      transition: color 0.2s, background-color 0.2s;
+      &:hover {
+        color: #fff;
+        background-color: @lighter;
+      }
+      &._root_active {
+        color: #fff;
+        background-color: @lighter;
+        .root-nav-text {
+          display:inline;
+          width:auto;
+        }
+      }
+    }
+  }
+
+  #sidebar_2 {
+    color: #888;
+    background-color: #efefef;
+    margin: 0 0 0 0;
+    position:fixed;
+    top:50px;
+    left:0;
+    width:100%; /*35px*/
+    height:0;
+    overflow:hidden;
+    transition:width 0.4s;
+    z-index:99;
+    &._nav_open {
+      height:@nav-2-height;
+      width:100%;
+      overflow-x:scroll;
+    }
+  }
+
+  ul.nav_2 {
+    position:absolute;
+    top:0;
+    left:30px;
+    white-space:nowrap;
+    display:none;
+    &._nav_active {
+      display:block;
+    }
+    li {
+      display:inline;
+      padding: 7px 15px 7px 15px;
+      transition: color 0.2s;
+      &:hover, &._2_active {
+        color:@base-color;
+      }
+    }
+  }
+
+  #nav-border {
+    opacity:1;
+    visibility:visible;
+    transition:opacity 0.6s;
+    position:fixed;
+    left:0;
+    top:50px;
+    height:5px;
+    width:100%;
+    background-color:@lighter; /*ff8000*/
+    transition: top 0.4s;
+    z-index:99;
+    &._nav_open {
+      top:50px + @nav-2-height;
+      left:0;
+    }
+  }
+
+  #close {display:none;}
+
+  @import url('./nav-icons.less');
+
+}
